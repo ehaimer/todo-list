@@ -1,6 +1,6 @@
 # Simple To-Do List React App
 
-<img src="https://raw.githubusercontent.com/ehaimer/todo-list/main/src/todo.jpg" alt="Todo App Image" style="width: 300px;" />
+<img src="https://raw.githubusercontent.com/ehaimer/todo-list/main/src/todo.jpg" alt="Todo App Image" style="width: 600px;" />
 
 ## Overview
 
