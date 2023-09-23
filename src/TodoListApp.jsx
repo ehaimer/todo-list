@@ -1,10 +1,10 @@
-import "./App.css"
+import "./TodoListApp.css"
 import { useRef, useState, useEffect } from "react"
 import Button from "./components/Button"
 import TodoList from "./components/TodoList"
 import { v4 as uuidv4 } from "uuid"
 
-function App() {
+function TodoListApp() {
   const LOCAL_STORAGE_KEY = "TodoListApp"
   const todoRef = useRef()
   const [isEdit, setIsEdit] = useState(false)
@@ -96,4 +96,4 @@ function App() {
   )
 }
 
-export default App
+export default TodoListApp
