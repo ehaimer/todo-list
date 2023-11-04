@@ -56,9 +56,11 @@ function TodoListApp() {
   }
 
   return (
-    <main className="flex flex-col h-screen container border mx-auto px-6 py-12 gap-y-8 my-16 rounded-lg drop-shadow-xl bg-white">
+    <main className="flex flex-col  container border mx-auto px-6 py-12 gap-y-8 my-16 rounded-lg drop-shadow-xl bg-white grow max-w-[90vw] lg:max-w-[60vw]">
       <section className="flex flex-col gap-y-8">
-        <h1 className="text-primary font-bold text-3xl whitespace-nowrap">My To-Do List</h1>
+        <h1 className="text-primary font-bold text-3xl whitespace-nowrap">
+          My To-Do List
+        </h1>
         <form
           onSubmit={handleSubmit}
           className="flex flex-col gap-y-6 text-gray-500"
@@ -69,15 +71,7 @@ function TodoListApp() {
             placeholder="Enter your To Do Item"
             className="rounded-full py-2 px-4 drop-shadow-md focus:outline-none min-w-[220px]"
           />
-          <div className="flex gap-x-4">
-            <Button
-              type="button"
-              action={() =>
-                setTodoList(todoList.filter((todo) => !todo.isComplete))
-              }
-            >
-              Clear Completed
-            </Button>
+          <div className="flex flex-col gap-4">
             <Button type="submit">{isEdit ? "Edit" : "Add"}</Button>
           </div>
         </form>
@@ -92,6 +86,16 @@ function TodoListApp() {
           handleEdit={handleEdit}
         />
       </section>
+      {todoList.every((todo) => !todo.toDo) || (
+        <Button
+          type="button"
+          action={() =>
+            setTodoList(todoList.filter((todo) => !todo.isComplete))
+          }
+        >
+          Clear Completed
+        </Button>
+      )}
     </main>
   )
 }
