@@ -5,7 +5,7 @@ const Button = ({ type, action, children }) => {
     <button
       type={type}
       onClick={action}
-      className="rounded-full bg-forth text-white drop-shadow-md font-medium px-4 py-1.5 focus:outline-none hover:scale-105 focus:scale-105 active:scale-100 whitespace-nowrap w-[160px] "
+      className="rounded-full bg-forth text-white shadow-md font-medium px-4 py-1.5 focus:outline-none hover:scale-105 focus:scale-105 active:scale-100 whitespace-nowrap w-[160px] "
     >
       {children}
     </button>

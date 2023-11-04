@@ -56,7 +56,7 @@ function TodoListApp() {
   }
 
   return (
-    <main className="flex flex-col  container border mx-auto px-6 py-12 gap-y-8 my-16 rounded-lg drop-shadow-xl bg-white grow max-w-[90vw] lg:max-w-[60vw]">
+    <main className="flex flex-col  container border mx-auto px-6 py-12 gap-y-8 my-16 rounded-lg shadow-xl bg-white grow max-w-[90vw] lg:max-w-[60vw]">
       <section className="flex flex-col gap-y-8">
         <h1 className="text-primary font-bold text-3xl whitespace-nowrap">
           My To-Do List
@@ -69,7 +69,7 @@ function TodoListApp() {
             type="text"
             ref={todoRef}
             placeholder="Enter your To Do Item"
-            className="rounded-full py-2 px-4 drop-shadow-md focus:outline-none min-w-[220px]"
+            className="rounded-full py-2 px-4 shadow-md focus:outline-none min-w-[220px]"
           />
           <div className="flex flex-col gap-4">
             <Button type="submit">{isEdit ? "Edit" : "Add"}</Button>
